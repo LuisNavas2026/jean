@@ -1,5 +1,5 @@
 # Dockerfile
-FROM node:18-alphine
+FROM node:18-alpine
 
 # Crear directorio de la aplicación
 WORKDIR /usr/src/app
@@ -10,10 +10,6 @@ COPY index.js .
 
 # Instalar dependencias
 RUN npm install --no-package-lock
-
-# Copiar el resto de los archivos
-COPY users.json .       
-
 # Exponer el puerto de la aplicación
 EXPOSE 3000
 
